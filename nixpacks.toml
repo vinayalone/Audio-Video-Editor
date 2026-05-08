@@ -1,0 +1,8 @@
+# Railway / Nixpacks build config
+# Installs ffmpeg from the Nix package repository so it is available at runtime.
+
+[phases.setup]
+nixPkgs = ["ffmpeg", "python311"]
+
+[start]
+cmd = "python bot.py"
