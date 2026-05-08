@@ -1,8 +1,3 @@
-# Railway / Nixpacks build config
-# Installs ffmpeg from the Nix package repository so it is available at runtime.
-
-[phases.setup]
-nixPkgs = ["ffmpeg", "python311"]
-
-[start]
-cmd = "python bot.py"
+# NOTE: This file is ignored when a Dockerfile is present in the repo.
+# Railway automatically uses the Dockerfile for builds.
+# ffmpeg is installed via apt-get inside the Dockerfile.
